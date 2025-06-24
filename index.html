@@ -16,6 +16,7 @@
           <li class="menu__item menu__item--active" data-page="main">Главная</li>
           <li class="menu__item" data-page="documents">Документы для оформления</li>
           <li class="menu__item" data-page="esign">Электронная подпись</li>
+          <li class="menu__item" data-page="contacts">К кому обратиться</li>
           <li class="menu__item" data-page="mentors">Руководитель и наставник</li>
           <li class="menu__item" data-page="resources">Корпоративные ресурсы</li>
         </ul>
@@ -162,19 +163,163 @@
 
 <!-- Пустые страницы-заглушки -->
 
-<!-- К кому обратиться (заглушка) -->
-<section id="contacts" class="page-content">
-  <h1>К кому обратиться</h1>
-</section>
-
 <!-- Электронная подпись (заглушка) -->
 <section id="esign" class="page-content">
-    <h1>Электронная подпись</h1>
+  <header class="header">
+      <h1 class="header__title">Электронная подпись</h1>
+  </header>
+
+  <section class="esign">
+      <p class="esign__notice">
+          Удалённые сотрудники подписывают все документы УКЭП (усиленной квалифицированной электронной подписью).<br>
+          Если оформляешь УКЭП платно, компания возместит затраты
+      </p>
+
+      <hr class="separator">
+
+      <h2 class="esign__subtitle">Варианты получения сертификата УКЭП:</h2>
+      
+      <div class="esign__table">
+          <div class="esign__column">
+              <h3 class="esign__provider">Госключ</h3>
+              <p class="esign__description">Бесплатный сертификат для физлиц и самозанятых</p>
+              <p class="esign__requirements">Для его получения понадобится:</p>
+              <ul class="esign__list">
+                  <li class="esign__item">Учётная запись на Госуслугах</li>
+                  <li class="esign__item">Приложение «Госключ»</li>
+              </ul>
+              <a href="#" class="esign__link">Инструкция по оформлению электронной подписи</a>
+          </div>
+          
+          <div class="esign__column">
+              <h3 class="esign__provider">ФНС России</h3>
+              <p class="esign__description">Бесплатный сертификат для ИП</p>
+              <p class="esign__requirements">Для его получения понадобится:</p>
+              <ul class="esign__list">
+                  <li class="esign__item">Личный визит в Удостоверяющий центр ФНС России</li>
+              </ul>
+              <a href="#" class="esign__link">Инструкция по оформлению электронной подписи</a>
+          </div>
+      </div>
+
+      <hr class="separator">
+
+      <div class="esign__alternative">
+          <p>В качестве альтернативы можно оформить сертификат УКЭП в Контуре. Он платный, но компания возмещает затраты.</p>
+          <div class="esign__links">
+              <a href="#" class="esign__link">Инструкция для физлиц и самозанятых</a>
+              <a href="#" class="esign__link">Инструкция для ИП</a>
+          </div>
+      </div>
+  </section>
+</section>
+
+<!-- К кому обратиться (заглушка) -->
+<section id="contacts" class="page-content">
+  <header class="header">
+      <h1 class="header__title">К кому обратиться за помощью</h1>
+  </header>
+
+  <section class="contacts">
+      <!-- Специалист по кадрам -->
+      <div class="contacts__person">
+          <h2 class="contacts__name">Имя Фамилия</h2>
+          <p class="contacts__position">Ведущий специалист по кадрам</p>
+          <p class="contacts__responsibility">Вопросы:</p>
+          <ul class="contacts__list">
+              <li class="contacts__item">Оформление на работу</li>
+              <li class="contacts__item">Отпуска</li>
+              <li class="contacts__item">Больничные</li>
+              <li class="contacts__item">Выдача справок о заработной плате и трудовой деятельности</li>
+          </ul>
+      </div>
+
+      <hr class="separator">
+
+      <!-- Специалист технического отдела -->
+      <div class="contacts__person">
+          <h2 class="contacts__name">Имя Фамилия</h2>
+          <p class="contacts__position">Ведущий специалист технического отдела</p>
+          <p class="contacts__responsibility">Вопросы:</p>
+          <ul class="contacts__list">
+              <li class="contacts__item">Подключения компьютера к рабочим пространствам компании</li>
+              <li class="contacts__item">Оборудования рабочего места</li>
+              <li class="contacts__item">Получения инструкций, логинов и паролей для внутренних ресурсов</li>
+          </ul>
+      </div>
+
+      <hr class="separator">
+
+      <!-- HR-специалист -->
+      <div class="contacts__person">
+          <h2 class="contacts__name">Имя Фамилия</h2>
+          <p class="contacts__position">Ведущий специалист HR-отдела</p>
+          <p class="contacts__responsibility">Вопросы:</p>
+          <ul class="contacts__list">
+              <li class="contacts__item">Адаптация</li>
+              <li class="contacts__item">Выдачи велком-пака и толстовок</li>
+              <li class="contacts__item">Создания комфортных условий труда</li>
+              <li class="contacts__item">Оформления ДМС после испытательного срока</li>
+              <li class="contacts__item">Организация обучения и развития</li>
+              <li class="contacts__item">Запись на корпоративный английский</li>
+          </ul>
+      </div>
+
+      <hr class="separator">
+
+      <!-- Другое -->
+      <div class="contacts__person">
+          <h2 class="contacts__name">Имя Фамилия</h2>
+          <p class="contacts__position">Должность</p>
+      </div>
+  </section>
 </section>
 
 <!-- Руководитель и наставник (заглушка) -->
 <section id="mentors" class="page-content">
-    <h1>Руководитель и наставник</h1>
+  <header class="header">
+      <h1 class="header__title">Руководитель и наставник</h1>
+  </header>
+
+  <section class="mentors">
+      <!-- Руководитель -->
+      <div class="mentors__block">
+          <h2 class="mentors__subtitle">Руководитель</h2>
+          
+          <div class="mentors__person">
+              <input type="checkbox" id="leader-check" class="mentors__checkbox">
+              <div class="mentors__info">
+                  <label for="leader-check" class="mentors__name">Имя Фамилия</label>
+                  <p class="mentors__position">Должность руководителя</p>
+              </div>
+          </div>
+          
+          <div class="mentors__person">
+              <input type="checkbox" id="leader-mt-check" class="mentors__checkbox">
+              <label for="leader-mt-check" class="mentors__name">МТ</label>
+          </div>
+      </div>
+
+      <hr class="separator">
+
+      <!-- Наставник -->
+      <div class="mentors__block">
+          <h2 class="mentors__subtitle">Наставник</h2>
+          
+          <div class="mentors__person">
+              <input type="checkbox" id="mentor-check" class="mentors__checkbox">
+              <div class="mentors__info">
+                  <label for="mentor-check" class="mentors__name">Имя Фамилия</label>
+                  <p class="mentors__position">Должность наставника</p>
+              </div>
+          </div>
+          
+          <div class="mentors__person">
+              <input type="checkbox" id="mentor-mt-check" class="mentors__checkbox">
+              <label for="mentor-mt-check" class="mentors__name">МТ</label>
+          </div>
+      </div>
+  </section>
 </section>
 
 <!-- Корпоративные ресурсы (заглушка) -->
