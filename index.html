@@ -1,13 +1,212 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="ru">
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
+    <title>Монета | Внутренний портал</title>
+</head>
+<body>
+  <div class="page">
+    <!-- Левое меню -->
+    <aside class="sidebar">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item" data-page="profile">Имя пользователя</li>
+          <li class="menu__item menu__item--active" data-page="main">Главная</li>
+          <li class="menu__item" data-page="documents">Документы для оформления</li>
+          <li class="menu__item" data-page="esign">Электронная подпись</li>
+          <li class="menu__item" data-page="mentors">Руководитель и наставник</li>
+          <li class="menu__item" data-page="resources">Корпоративные ресурсы</li>
+        </ul>
+      </nav>
+    </aside>
+
+  <!-- Основной контент -->
+  <main class="content">
+    <!-- Главная страница -->
+    <section id="main" class="page-content page-content--active">
+      <header class="header">
+        <h1 class="header__title">Добро пожаловать в компанию!</h1>
+        <h2 class="header__subtitle">Константин К.</h2>
+    </header>
+
+    <section class="info">
+      <ul class="info__list">
+        <li class="info__item">
+          <span class="info__label">Юр. Лицо</span>
+          <span class="info__value">НКО «МОНЕТЫ» (ООО)</span>
+        </li>
+        <li class="info__item">
+          <span class="info__label">Отдел/команда</span>
+          <span class="info__value">Фронтенд</span>
+        </li>
+        <li class="info__item">
+          <span class="info__label">Корпоративный e-mail</span>
+          <span class="info__value">mail@moneta.ru</span>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="separator" />
+      <section class="info_2">
+        <ul class="info__list">
+          <li class="info_2__item">
+            <span class="info_2__label">Подразделение</span>
+            <span class="info_2__value">Разработка</span>
+          </li>
+          <li class="info_2__item">
+            <span class="info_2__label">Должность</span>
+            <span class="info_2__value">Разработчик</span>
+          </li>
+          <li class="info_2__item">
+            <span class="info_2__label">Место работы</span>
+            <span class="info_2__value">Офис на Мира</span>
+          </li>
+        </ul>
+      </section>
+    <hr class="separator" />
+
+    <section class="about">
+      <h3 class="about__title">О себе</h3>
+      <p class="about__text">
+        Здесь будет информация о сотруднике, которую он сможет заполнить самостоятельно. 
+        Расскажите о своих интересах, опыте работы, навыках и другую информацию.
+      </p>
+    </section>
+  </main>
+
+
+
+  <!-- Документы для оформления -->
+  <section id="documents" class="page-content">
+    <header class="header">
+        <h1 class="header__title">Документы для оформления</h1>
+    </header>
+
+    <section class="documents">
+        <ul class="documents__list">
+            <li class="documents__item">
+                <input type="checkbox" id="doc1">
+                <label for="doc1">Паспорт РФ</label>
+                <p class="documents__description">Необходимо предоставить оригинал и копию паспорта</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc2">
+                <label for="doc2">Трудовая книжка</label>
+                <p class="documents__description">Трудовая книжка либо форма СТД-P с предыдущего места работы (в случае электронной трудовой книжки)</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc3">
+                <label for="doc3">СНИЛС</label>
+                <p class="documents__description">Страховое свидетельство государственного пенсионного страхования</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc4">
+                <label for="doc4">ИНН</label>
+                <p class="documents__description">Свидетельство о постановке на учёт в налоговом органе</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc5">
+                <label for="doc5">Военный билет</label>
+                <p class="documents__description">Военный билет для военнообязанных либо документ, его заменяющий</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc6">
+                <label for="doc6">Диплом об образовании</label>
+                <p class="documents__description">Диплом (свидетельство, сертификат и т.д.) об образовании</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc7">
+                <label for="doc7">Фактический адрес</label>
+                <p class="documents__description">Если отличается от прописки</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc8">
+                <label for="doc8">Номер телефона</label>
+                <p class="documents__description">Контактный номер телефона</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc9">
+                <label for="doc9">Адрес личной электронной почты</label>
+                <p class="documents__description">Личный e-mail для связи</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc10">
+                <label for="doc10">Реквизиты банковской карты</label>
+                <p class="documents__description">Для перечисления заработной платы</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc11">
+                <label for="doc11">Свидетельство о заключении брака</label>
+                <p class="documents__description">При наличии</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc12">
+                <label for="doc12">Свидетельство о рождении ребёнка</label>
+                <p class="documents__description">При наличии</p>
+            </li>
+            <li class="documents__item">
+                <input type="checkbox" id="doc13">
+                <label for="doc13">Справка 2-НДФЛ</label>
+                <p class="documents__description">Если в трудовой книжке произведена запись об увольнении с предыдущего места работы в текущем году и нужны налоговые вычеты на детей.</p>
+            </li>
+        </ul>
+
+        <div class="documents__notice">
+            <p><strong>Важно:</strong></p>
+            <p>Предоставьте все необходимую информацию за 7-14 дней до даты выхода на работу — специалист по кадрам подготовит документы на подпись: трудовой договор, NDA и др.</p>
+        </div>
+    </section>
+</section>
+
+<!-- Пустые страницы-заглушки -->
+
+<!-- К кому обратиться (заглушка) -->
+<section id="contacts" class="page-content">
+  <h1>К кому обратиться</h1>
+</section>
+
+<!-- Электронная подпись (заглушка) -->
+<section id="esign" class="page-content">
+    <h1>Электронная подпись</h1>
+</section>
+
+<!-- Руководитель и наставник (заглушка) -->
+<section id="mentors" class="page-content">
+    <h1>Руководитель и наставник</h1>
+</section>
+
+<!-- Корпоративные ресурсы (заглушка) -->
+<section id="resources" class="page-content">
+    <h1>Корпоративные ресурсы</h1>
+</section>
+</main>
+</div>
+
+<script>
+document.querySelectorAll('.menu__item').forEach(item => {
+item.addEventListener('click', function() {
+    // Убираем активный класс у всех пунктов меню
+    document.querySelectorAll('.menu__item').forEach(i => {
+        i.classList.remove('menu__item--active');
+    });
+    // Добавляем активный класс текущему пункту
+    this.classList.add('menu__item--active');
+    
+    // Скрываем все страницы
+    document.querySelectorAll('.page-content').forEach(page => {
+        page.classList.remove('page-content--active');
+    });
+    // Показываем выбранную страницу
+    const pageId = this.getAttribute('data-page');
+    document.getElementById(pageId).classList.add('page-content--active');
+});
+});
+</script>
+
+  <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+  </div>
+</body>
 </html>
