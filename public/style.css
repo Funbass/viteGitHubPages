@@ -1,15 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap");
 
-:root {
+/*:root {
   font-family: "Wix Madefor Display", sans-serif;
   font-size: 14px;
 }
-.main,
-.documents,
-.esign,
-.contacts,
-.mentors,
-.resources {
+.main, .documents, .esign, .contacts, .mentors, .resources {
   display: none;
 }
 
@@ -23,54 +18,69 @@ body {
 }
 .main__title {
   font-size: 28px;
+  width: 100%;
 }
 
-/*sidebar*/
-.sidebar__list__link.active {
-  background-color: #f0f0f0;
-  font-weight: bold;
-}
-
-.sidebar {
-  background-color: #f4f6f8;
+/* ===== Базовая настройка ===== */
+* {
   margin: 0;
-  margin-right: 35px;
-  height: 1024px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-size: 14px;
+  background-color: #f6f7f9;
+  color: #1d1d1f;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== Структура страницы ===== */
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== Сайдбар ===== */
+.sidebar {
+  width: 270px;
+  background-color: #F4F6F8;
+  padding: 20px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .sidebar__user {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 .sidebar__user__image {
   padding-left: 2px;
-}
-
-.sidebar__list__image {
-  padding-right: 6px;
-}
-
-.sidebar__list__text {
-  font-size: 16px;
-  white-space: nowrap;
-  margin: 0;
+  border-radius: 50%;
 }
 
 .sidebar__user__name {
   margin: auto auto auto 0;
 }
-.sidebar__list {
-  list-style: none;
-  padding: 0;
-  padding-left: 10px;
-  padding-right: 16px;
-  margin: 0;
-}
 
-.sidebar__list__item {
-  margin: 0;
-  padding: 0;
-  border-radius: 8px;
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .sidebar__list__link {
@@ -78,85 +88,310 @@ body {
   align-items: center;
   text-decoration: none;
   color: inherit;
-  padding: 8px 16px;
+  padding: 8px 16px; 
   margin: 2px 0;
 }
 
-.sidebar__list__link.active {
-  background-color: #e2e6ed;
-  border-radius: 8px;
-  position: relative;
+.sidebar__list__link:hover {
+  background-color: #eef1f5;
 }
 
-/*main*/
+.sidebar__list__image {
+  padding-right: 6px;
+}
+.sidebar__list__text {
+  font-size: 16px;
+  white-space: nowrap;
+  margin: 0;
+}
 
+/* ===== Контент ===== */
+.content {
+  flex: 1;
+  padding: 40px 32px;
+  overflow-y: auto;
+}
+
+/* ===== Главная ===== */
 .main_header {
-  padding-right: 30px;
+  margin-bottom: 24px;
 }
+
+.main_title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #292d32;
+}
+
+/* ===== Инфо ===== */
 .info {
   display: flex;
-}
-.info__list {
   width: 100%;
 }
+
+.user__icon {
+  align-self: flex-start; 
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
 .header__subtitle {
   padding-left: 40px;
 }
-.user__icon {
-  align-self: flex-start;
-}
-.about {
-  height: 1px;
+
+.info__list {
   width: 100%;
-  background-color: #e2e6ed;
+    list-style: none;
+  margin: 0;
+  width: 100%;
 }
-.info__title {
+
+.info__item, .info_2__item {
+  list-style: none;
+  margin: 0;
+  width: 100%;;
+}
+
+.info__title, .info_2__title {
   margin: 0;
 }
-.info__item {
-  width: 100%;
-  display: flex;
+
+.info__value, .info_2__value {
+  font-weight: 600;
+  color: #333;
 }
 
 .edit__icon {
-  align-self: flex-start;
-  margin-left: auto;
+  align-self:flex-start;
+  margin-left: auto
 }
 
-#aboutTextarea {
-  width: 100%;
-  height: 100px;
+/* ===== О себе ===== */
+.about {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.about__title {
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-/* docs */
+.about__text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+#editAboutBtn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#editAboutBtn:hover {
+  background-color: #005fa3;
+}
+
+/* ===== Документы ===== */
+.documents__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.documents__item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
 .docs__img {
-  align-self: baseline;
-  padding-right: 16px;
+  width: 40px;
+  margin-bottom: 10px;
 }
-.docs__notice {
-  overflow: hidden;
-  background-color: #eef8fe;
+
+.documents__description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== Важно блок ===== */
+.docs__notice_layout {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  background-color: #fff3cd;
+  padding: 20px;
+  border-left: 5px solid #ffc107;
   border-radius: 8px;
-  margin-bottom: 50px;
+  gap: 20px;
 }
 
-.docs__attention__img {
-  padding-right: 16px;
+.docs_attention__img {
+  width: 32px;
+  height: 32px;
 }
+
 .docs_attention__text {
-  margin: 0;
-  padding-left: 50px;
-  padding-right: 30px;
-  padding-bottom: 20px;
+  font-size: 15px;
+  color: #333;
 }
 
-/* hepl */
-
-.helpers__icon {
-  width: 100px;
-  height: 100px;
+/* ===== Электронная подпись ===== */
+.esign__notice {
+  background-color: #e6f7ff;
+  padding: 20px;
+  border-left: 5px solid #1890ff;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  font-size: 15px;
 }
+
+.esign__table {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.esign__column {
+  background-color: #fff;
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.esign__provider {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.esign__description,
+.esign__requirements {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.esign__list {
+  padding-left: 20px;
+}
+
+.esign__item {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+
+.esign__link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0078d4;
+  font-weight: 500;
+}
+
+.esign__link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Контакты ===== */
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.contacts__person {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  text-align: center;
+}
+
+.contacts__photo, .helpers__icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+}
+
+.contacts__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contacts__position {
+  font-size: 14px;
+  color: #777;
+  margin: 8px 0;
+}
+
+.contacts__responsibility {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 12px 0 6px;
+}
+
+.contacts__list {
+  font-size: 14px;
+  text-align: left;
+}
+
+.contacts__item {
+  margin-bottom: 6px;
+}
+
+.contact__list {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .contact__icon {
-  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ===== Руководитель и наставник ===== */
+.mentors__block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.mentors__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.mentors__info {
+  flex-grow: 1;
+}
+
+.mentors__name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mentors__position {
+  font-size: 14px;
+  color: #666;
 }
